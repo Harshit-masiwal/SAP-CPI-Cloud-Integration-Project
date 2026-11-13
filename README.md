@@ -1,84 +1,79 @@
 # ☁️ SAP CPI – Real-Time Integration Project
 
-\<p align="center">
-&#x20; \<img src="[https://img.shields.io/badge/SAP-CPI-0FA6D6?style=for-the-badge&logo=sap&logoColor=white](https://img.shields.io/badge/SAP-CPI-0FA6D6?style=for-the-badge\&logo=sap\&logoColor=white)"/>
-&#x20; \<img src="[https://img.shields.io/badge/SAP-BTP-0870C0?style=for-the-badge](https://img.shields.io/badge/SAP-BTP-0870C0?style=for-the-badge)"/>
-&#x20; \<img src="[https://img.shields.io/badge/Integration-Real--Time-success?style=for-the-badge](https://img.shields.io/badge/Integration-Real--Time-success?style=for-the-badge)"/>
-&#x20; \<img src="[https://img.shields.io/badge/Platform-Integration%20Suite-blueviolet?style=for-the-badge](https://img.shields.io/badge/Platform-Integration%20Suite-blueviolet?style=for-the-badge)"/>
-\</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/SAP-CPI-0FA6D6?style=for-the-badge&logo=sap&logoColor=white"/>
+  <img src="https://img.shields.io/badge/SAP-BTP-0870C0?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Integration-Real--Time-success?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Platform-Integration%20Suite-blueviolet?style=for-the-badge"/>
+</p>
 
-\<p align="center">
-&#x20; \<b>Hands-on Real-Time Integration Scenario using SAP Cloud Integration\</b>
-\</p>
+<p align="center">
+  **Hands-on Real-Time Integration using SAP Cloud Integration**
+</p>
 
 ---
 
 ## 🚀 Project Overview
 
-This project demonstrates a hands-on implementation of a real-time integration scenario using **SAP Cloud Integration (CPI)** within SAP Integration Suite.
+This project demonstrates the practical implementation of a real-time integration scenario using **SAP Cloud Integration (CPI)** within SAP Integration Suite on SAP Business Technology Platform (BTP).
 
-The project was developed using a SAP BTP trial account to gain practical exposure to enterprise integration concepts, Integration Flow (iFlow) development, message processing, and communication between external systems and APIs.
+The project focuses on understanding how different applications and external systems communicate through SAP CPI using Integration Flows (iFlows).
 
-The implementation follows the learning scenario demonstrated in the tutorial **"SAP CPI Real-Time Integration Project | Complete Trial Account Project for Beginners – Day 12"** by Abhishek Era Official.
+It covers integration flow development, sender and receiver configuration, message processing, HTTP-based communication, API connectivity, and request-response handling.
 
-The primary goal was to understand how SAP CPI processes incoming requests, manages messages, connects with external services, and handles responses through an integration flow.
+The implementation was carried out using an SAP BTP Trial Account to gain hands-on experience with enterprise integration concepts and cloud-based middleware.
 
 ---
 
 ## 🎯 Project Objectives
 
-- Build a practical real-time integration scenario using SAP CPI.
-- Understand the complete lifecycle of an Integration Flow.
+- Develop and configure SAP CPI Integration Flows (iFlows).
+- Understand real-time application-to-application communication.
 - Configure sender and receiver communication.
 - Process incoming messages through integration components.
 - Understand message transformation and routing.
-- Establish communication with external systems and APIs.
-- Test integration endpoints and validate responses.
-- Gain hands-on experience with SAP BTP Trial Account.
+- Establish connectivity with external systems and APIs.
+- Handle synchronous request-response communication.
+- Test integration endpoints using Postman.
+- Understand the role of SAP CPI in enterprise integration architecture.
 
 ---
 
 ## 🛠️ Technologies & Tools
 
-| Technology                  | Purpose                                   |
-| --------------------------- | ----------------------------------------- |
-| SAP Integration Suite       | Cloud integration platform                |
-| SAP Cloud Integration (CPI) | iFlow development                         |
-| SAP BTP Trial Account       | Development environment                   |
-| Integration Flow (iFlow)    | Integration logic                         |
-| HTTP Adapter                | HTTP-based communication                  |
-| REST API                    | External system connectivity              |
-| XML / JSON                  | Message formats                           |
-| Postman                     | API testing                               |
-| Groovy                      | Custom message processing, where required |
+| Technology | Purpose |
+|---|---|
+| SAP Integration Suite | Cloud integration platform |
+| SAP Cloud Integration (CPI) | Integration flow development |
+| SAP BTP Trial Account | Development environment |
+| Integration Flow (iFlow) | Integration logic |
+| HTTP Adapter | HTTP-based communication |
+| REST APIs | External system connectivity |
+| XML / JSON | Message formats |
+| Postman | API testing |
+| Groovy | Custom message processing, where applicable |
 
 ---
 
 ## ⚙️ Implementation & Integration Concepts
 
 ### 1. Integration Flow Development
-
-Created and configured an Integration Flow to understand how messages travel between sender and receiver systems.
+Designed and configured Integration Flows to understand how messages travel between sender and receiver systems.
 
 ### 2. Sender Configuration
-
-Configured the sender-side communication to receive incoming requests through the integration endpoint.
+Configured sender-side communication to receive incoming requests through the CPI integration endpoint.
 
 ### 3. Message Processing
-
-Explored how SAP CPI processes incoming messages and manages message content throughout the integration flow.
+Explored message handling and processing within the integration flow.
 
 ### 4. Receiver Communication
+Configured receiver-side connectivity to understand communication between SAP CPI and external systems.
 
-Configured receiver-side connectivity to understand how CPI communicates with external systems.
-
-### 5. Real-Time Request-Response
-
-Explored synchronous communication patterns and response handling within an integration scenario.
+### 5. Request-Reply Communication
+Explored synchronous communication patterns to send requests and receive responses from external services.
 
 ### 6. API Testing Using Postman
-
-Used Postman to send requests to the integration endpoint and validate the responses returned by SAP CPI.
+Used Postman to send HTTP requests to the deployed integration endpoint and validate the responses.
 
 ---
 
@@ -86,34 +81,34 @@ Used Postman to send requests to the integration endpoint and validate the respo
 
 ```text
        External Client
-        (Postman)
-            |
-            v
-      HTTP Request
-            |
-            v
+         (Postman)
+             |
+             v
+        HTTP Request
+             |
+             v
        SAP CPI Endpoint
-            |
-            v
-      Integration Flow
-            |
-            v
-     Message Processing
-            |
-            v
-      Receiver System
-            |
-            v
+             |
+             v
+       Integration Flow
+             |
+             v
+      Message Processing
+             |
+             v
+       Receiver System
+             |
+             v
       Response Handling
-            |
-            v
-       HTTP Response
-            |
-            v
-         Postman
+             |
+             v
+        HTTP Response
+             |
+             v
+           Postman
 ```
 
-*Note: This represents the conceptual request-response architecture. Actual iFlow components depend on the implemented scenario.*
+*Note: This represents the conceptual request-response architecture. Actual iFlow components depend on the implemented integration scenario.*
 
 ---
 
@@ -121,7 +116,7 @@ Used Postman to send requests to the integration endpoint and validate the respo
 
 The integration scenario was tested using Postman.
 
-Testing focused on:
+Testing activities included:
 
 - Sending HTTP requests to the deployed iFlow endpoint.
 - Validating incoming request data.
@@ -134,17 +129,17 @@ Testing focused on:
 
 ## 📚 Key Learnings
 
-Through this project, I gained practical exposure to:
+Through this hands-on project, I gained practical exposure to:
 
-- SAP CPI and SAP Integration Suite.
-- SAP BTP Trial Account configuration.
+- SAP CPI architecture and Integration Suite.
+- SAP BTP Trial Account environment.
 - Integration Flow design and deployment.
 - Sender and receiver adapters.
 - HTTP-based API integration.
 - Synchronous request-response communication.
 - Message processing and data exchange.
 - API testing using Postman.
-- Real-world enterprise integration concepts.
+- Enterprise application integration concepts.
 
 ---
 
@@ -154,11 +149,11 @@ Through this project, I gained practical exposure to:
 
 Aspiring AI/ML Engineer | SAP CPI & Integration Suite Learner
 
-- GitHub: [Harshit-masiwal](https://github.com/Harshit-masiwal)
-- Technical Interests: SAP BTP, SAP CPI, Cloud Integration, REST APIs, Groovy, Python, AI/ML.
+- **GitHub:** [Harshit-masiwal](https://github.com/Harshit-masiwal)
+- **Interests:** SAP BTP, SAP CPI, Cloud Integration, REST APIs, Groovy, Python, AI/ML.
 
 ---
 
-\<p align="center">
-&#x20; \<b>🚀 Learning by Building | Exploring Enterprise Integration | Growing Every Day\</b>
-\</p>
+<p align="center">
+  **🚀 Learning by Building | Exploring Enterprise Integration | Growing Every Day**
+</p>
